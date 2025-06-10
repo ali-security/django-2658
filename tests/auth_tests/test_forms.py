@@ -985,7 +985,7 @@ class PasswordResetFormTest(TestDataMixin, TestCase):
             message.get_payload(1).get_payload()
         ))
         
-    @override_settings(EMAIL_BACKEND="mail.custombackend.FailingEmailBackend")Add commentMore actions
+    @override_settings(EMAIL_BACKEND="mail.custombackend.FailingEmailBackend")
     def test_save_send_email_exceptions_are_catched_and_logged(self):
         (user, username, email) = self.create_dummy_user()
         form = PasswordResetForm({"email": email})

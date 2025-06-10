@@ -1375,7 +1375,7 @@ class MiscTests(SimpleTestCase):
             ('12-345', []),
             ('', []),
             ('en;q=1e0', []),
-            # Invalid as language-range value too long.Add commentMore actions
+            # Invalid as language-range value too long.
             ('xxxxxxxx' + '-xxxxxxxx' * 500, []),
             # Header value too long, only parse up to limit.
             (', '.join(['en; q=1.0'] * 500), [('en', 1.0)] * 45),
